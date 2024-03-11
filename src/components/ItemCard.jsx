@@ -1,24 +1,31 @@
 import React from "react";
 import styles from "../styles/ItemCard.module.css";
-import { useContext } from "react";
-import { itemContext } from "../context";
+// import { useContext } from "react";
+// import { itemContext } from "../context";
+
+// use for custom context provider
+import { useContextCustom } from "../contextForCustom";
 
 function ItemCard({ name, price }) {
-  let value = useContext(itemContext);
-  
-  const handleAdd = (price) => {
+
+  // let value = useContext(itemContext);
+
+  let {handleAdd, handleRemove} = useContextCustom();
+
+  // lifting this to the spearate file used if we are not using the custom hooks and custom context
+  // const handleAdd = (price) => {
       
-      value.setTotal(value.total + price)
-      value.setItem((prev) => prev + 1)
-  };
+  //     value.setTotal(value.total + price)
+  //     value.setItem((prev) => prev + 1)
+  // };
 
-  const handleRemove = (price) => {
-    if(value.total > 0) {
+  // const handleRemove = (price) => {
+  //   if(value.total > 0) {
 
-      value.setTotal(value.total - price)
-      value.setItem((prev) =>  prev - 1)
-    }
-  };
+  //     value.setTotal(value.total - price)
+  //     value.setItem((prev) =>  prev - 1)
+  //   }
+  // };
 
   return (
     <div className={styles.itemCard}>
