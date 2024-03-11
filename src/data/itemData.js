@@ -24,6 +24,27 @@ const ItemData = [
     name: 'Socks',
     price: 500,
   },
+  {
+    id: 6,
+    name: 'Apple',
+    price: 100,
+  },{
+    id: 7,
+    name: 'Banana',
+    price: 40,
+  },{
+    id: 8,
+    name: 'Grapes',
+    price: 100,
+  },{
+    id: 9,
+    name: 'Strawberry',
+    price: 100,
+  },{
+    id: 10,
+    name: 'Black Grapes',
+    price: 100,
+  },
 ];
 
 

@@ -2,11 +2,16 @@ import "./App.css";
 import Items from "./components/Items";
 import Navbar from "./components/Navbar";
 import CustomItemContext, { itemContext } from "./contextForCustom";
+import CartModal from "./components/CartModal";
+ 
 
 function AppCustomContext() {
   
+  
   return (
+
     // behave likes the default provier
+    <>
     <CustomItemContext>
       <div className="App">
         <h2>Shopping Cart</h2>
@@ -15,6 +20,9 @@ function AppCustomContext() {
         <Items />
       </div>
     </CustomItemContext>
+
+    </>
+
   );
 }
 export default AppCustomContext;

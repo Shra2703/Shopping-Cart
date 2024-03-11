@@ -6,14 +6,18 @@ import styles2 from "../styles/ItemCard.module.css";
 
 // Custom context provider
 import { useContextCustom } from "../contextForCustom";
+import CartModal from "./CartModal";
 
 function Navbar() {
   // let value = useContext(itemContext);
-  let { total, item, handleReset } = useContextCustom();
+  let { total, item, show, handleReset, handleCartToggle } = useContextCustom();
   return (
     <div className={styles.container}>
       <h1>Total : &#x20B9; {total}</h1>
       <h1>Items: {item}</h1>
+      <button className={styles2.itemButton} onClick={handleCartToggle}>
+        Cart
+      </button>
       <button className={styles2.itemButton} onClick={handleReset}>
         Reset
       </button>
